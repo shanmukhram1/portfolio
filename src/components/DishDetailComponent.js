@@ -14,7 +14,7 @@ function RenderDish({dish}){
                     exitTransform:'scale(0.5) translateY(-50%)'
                 }}>
                 <Card>
-                    <CardImg top width="100%" src={baseUrl+dish.image} alt={dish.name}/>
+                    <CardImg top width="100%" src={dish.image} alt={dish.name}/>
                     <CardBody>
                         <CardTitle>{dish.name}</CardTitle>
                         <CardText>{dish.description}</CardText>
@@ -42,11 +42,9 @@ function RenderComments({comments,postComment,dishId}){
                         return(   
                             <Fade in>               
                                 <li key={dish.id}>
-                                    <p>{"Project Poster - "}<a href="file:///home/kalyan/Documents/CourseEra/React/confusion/public/pdf/AGRI.pdf">Open PDF</a></p>
-                                    <p>{"SLRDT File - "}<a href={dish.author}  target="_blank" download>Download</a></p>
-                                    <img src={dish.slrdt} alt={"actuator"} height={100} width={300}/>
-                                    <p>{"Circuit Diagram - "}<a href={dish.circuitLink}  target="_blank">Open JSON File</a></p>
-                                    <img src={dish.circuitImage} alt={"actuator"} height={100} width={300}/>
+                                    <p>{"Project Poster - "}<a href={dish.comment} target="_blank">Open PDF</a></p>
+                                    <p>{"Project Report - "}<a href={dish.author}  target="_blank" download>Download</a></p>
+                                    <p>{"Drive Link - "}<a href={dish.drive}  target="_blank">Open</a></p>
                                     <div className="row">
                                         <div className="col-12 col-md-8">
                                             <video autoPlay muted loop id="myVideo" height={200} width={300} style={{marginTop:20}} controls>
