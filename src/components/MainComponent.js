@@ -11,6 +11,7 @@ import {DISHES} from '../shared/dishes';
 import {COMMENTS} from '../shared/commments';
 import {LEADERS} from '../shared/leaders';
 
+
 class Main extends Component {
   constructor(props)
   {
@@ -44,6 +45,7 @@ class Main extends Component {
     }
     return (
         <div>
+            <title>ShanmukhRam-Portfolio</title>
             <Header/>
             <Switch>
                 <Route path='/home' component={HomePage}/>

@@ -16,7 +16,7 @@ function Home(props){
                             <CardImg src={'assets/images/sports.jpg'} alt={"sports"}/>
                             <CardBody>
                                 <CardText>
-                                    {"While academics have usually occupied centre stage in my life, and work has mostly felt like play to me, I have participated in and, I am happy to say, even excelled at traditional forms of playing as well. I have been an avid basketball player and served as my University’s basketball team captain for two consecutive years (2017-2019). I have also participated in both the Cricket and Table Tennis teams (2017-2018)."}
+                                    {"Since I heard the saying, “All study and no play makes Jack a dull boy”, I honestly have been a bit scared to study all day. So, participating in extra-curricular activities in my leisure time were a must, and to my surprise found out that I was quite good at them. Some of the notable mentions must be; I served Vellore Institute of Technology-Andhra Pradesh as the Captain of the Basketball Team for two consecutive years (2017-2019), I participated in both Cricket and Table Tennis for one year (2017-2018) as well"}
                                 </CardText>
                             </CardBody>
                         </Card>
@@ -30,7 +30,7 @@ function Home(props){
                         <Card>
                             <CardImg src={'assets/images/marchpast.jpg'} alt={"march-past"}/>
                             <CardBody>
-                                <CardText>{" I participated in slow Marching and escorting the Vice-chancellor of our institution on the 26th of January and 15th of august on the occasion of Republic Day and Independence day respectively."}</CardText>
+                                <CardText>{" I have participated in Marching and escorting the Vice-chancellor Dr. D Subhakar and the Vice president Dr. Shekar Vishwanathan on the 15th of August(2019) and the 26th of January(2020) on the occasion of Independence Day and Republic Day, respectively."}</CardText>
                             </CardBody>
                         </Card>
                     </FadeTransform>               

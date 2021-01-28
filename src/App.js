@@ -1,15 +1,22 @@
 import React,{Component} from 'react';
 import Main from './components/MainComponent';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'ShanmukhRam-Portfolio'
+
 
 class App extends Component {
   render(){
   return (
-      <BrowserRouter>
+      <HashRouter>
         <div>
+        <Helmet>
+          <title>{ TITLE }</title>
+        </Helmet>
           <Main/>
         </div>  
-      </BrowserRouter>
+      </HashRouter>
   );
   }
 }

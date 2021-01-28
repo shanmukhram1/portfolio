@@ -3,7 +3,6 @@ import { Card,CardBody,CardText,CardImg,CardTitle,BreadcrumbItem,Breadcrumb} fro
 import {Link} from 'react-router-dom';
 import '/home/kalyan/Documents/CourseEra/React/confusion/src/App.css';
 import {FadeTransform,Fade,Stagger} from 'react-animation-components';
-import {baseUrl} from '../shared/baseUrl';
 
 function RenderDish({dish}){
     if(dish!=null)
@@ -38,28 +37,59 @@ function RenderComments({comments,postComment,dishId}){
             <ul className="list-unstyled">
                 <Stagger in>
                     {comments.map((dish) => {
-                        console.log(dish);
-                        return(   
-                            <Fade in>               
-                                <li key={dish.id}>
-                                    <p>{"Project Poster - "}<a href={dish.comment} target="_blank">Open PDF</a></p>
-                                    <p>{"Project Report - "}<a href={dish.author}  target="_blank" download>Download</a></p>
-                                    <p>{"Drive Link - "}<a href={dish.drive}  target="_blank">Open</a></p>
-                                    <div className="row">
-                                        <div className="col-12 col-md-8">
-                                            <video autoPlay muted loop id="myVideo" height={200} width={300} style={{marginTop:20}} controls>
-                                                <source src={dish.video1} type="video/mp4"/>
-                                            </video>
+                        if(dish.id===0){
+                            return(   
+                                <Fade in>               
+                                    <li key={dish.id}>
+                                        <p>{"Project Report - "}<a href={dish.author}  target="_blank" rel="noopener noreferrer">Download</a></p>
+                                        <p>{"Design of Actuator and Circuit Diagram - "}<a href={dish.drive}  target="_blank" rel="noopener noreferrer">Open</a></p>
+                                        <div className="row">
+                                            <div className="col-12 col-md-8">
+                                                <video autoPlay muted loop id="myVideo" height={200} width={300} style={{marginTop:20}} controls>
+                                                    <source src={dish.video1} type="video/mp4"/>
+                                                </video>
+                                            </div>
+                                            <div className="col-12 col-md-2">
+                                                <video autoPlay id="myVideo" height={200} width={300} controls style={{marginTop:20}}>
+                                                    <source src={dish.video2} type="video/mp4"/>
+                                                </video>
+                                            </div>
                                         </div>
-                                        <div className="col-12 col-md-2">
-                                            <video autoPlay id="myVideo" height={200} width={300} controls style={{marginTop:20}}>
-                                                <source src={dish.video2} type="video/mp4"/>
-                                            </video>
+                                        <p>{dish.description}</p>
+                                    </li>
+                                </Fade>
+                            );
+                        }
+                        else{
+                            return(   
+                                <Fade in>               
+                                    <li key={dish.id}>
+                                        <p>{"Project Report - "}<a href={dish.author}  target="_blank" rel="noopener noreferrer">Download</a></p>
+                                        <p>{"Design and Simulation Files - "}<a href={dish.drive}  target="_blank" rel="noopener noreferrer">Open</a></p>
+                                        <div className="row">
+                                            <div className="col-12 col-md-8">
+                                                    <img src={dish.video1} alt={"honeycomb"} height={200} width={300} style={{marginTop:20}}/>
+                                            </div>
+                                            <div className="col-12 col-md-2">
+                                                    <img src={dish.video2} alt={"honeycomb"}style={{marginTop:20}} height={200} width={300}/>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </Fade>
-                        );
+                                        <p>{dish.description}</p>
+                                        <div className="row">
+                                            <div className="col-12 col-md-8">
+                                                <video autoPlay id="myVideo" height={200} width={300} controls style={{marginTop:20}}>
+                                                    <source src={dish.video3} type="video/mp4"/>
+                                                </video>
+                                            </div>
+                                            <div className="col-12 col-md-2">
+                                                    <img src={dish.video4} alt={"honeycomb"}style={{marginTop:20}} height={200} width={300}/>
+                                            </div>
+                                        </div>
+                                        <p>{dish.description1}</p>
+                                    </li>
+                                </Fade>
+                            );
+                        }
                     })}
                 </Stagger>
             </ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardTitle ,Breadcrumb ,BreadcrumbItem} from 'reactstrap';
+import { Card, CardImg ,Breadcrumb ,BreadcrumbItem} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 function RenderProjectItem({dish}){
@@ -7,7 +7,7 @@ function RenderProjectItem({dish}){
         <Card>
             <Link to={`/project/${dish.id}`}>
                 <CardImg width="100%" src={dish.image} alt={dish.name}/>
-                <CardImgOverlay><CardTitle>{dish.name}</CardTitle></CardImgOverlay>
+                <h4>{dish.name}</h4>
             </Link>
         </Card>
     );

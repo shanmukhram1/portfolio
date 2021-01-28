@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Navbar, NavbarBrand,Jumbotron,NavItem,Collapse,NavbarToggler,Nav,Modal,ModalBody,ModalHeader, Form, Button, FormGroup, Label, Input, Media} from 'reactstrap';
+import {Navbar, NavbarBrand,Jumbotron,NavItem,Collapse,NavbarToggler,Nav,Modal,ModalBody,ModalHeader, Form, Button, FormGroup, Label, Input} from 'reactstrap';
 import {NavLink} from 'react-router-dom';
 
 class Header extends Component{
@@ -33,7 +33,7 @@ class Header extends Component{
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}/>
-                        <NavbarBrand className="mr-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/home"><i className='fa fa-lg fa-briefcase' height="30" width="41" alt='SR'/></NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
@@ -55,12 +55,12 @@ class Header extends Component{
                 <Jumbotron>
                     <div className="container">
                         <div className="row row-header">
-                            <div className="col-12 col-sm-4">
+                            <div className="col-12 col-sm-2">
                                 <img src="assets/images/shanmukha.jpeg" alt="Shanmukha Ram" className="shanmukh" height="300" width="300"></img>
                             </div>
-                            <div className="col-12 col-sm-8">
+                            <div className="col-12 offset-2 col-sm-8">
                                 <h1>Peri Shanmukha Ram</h1>
-                                <p>Hi! I’m Shanmukha, I’m in my senior year(UnderGrad) at vellore institute of technology-AP, studying Mechanical Engineering.To satiate my curiosity and love for further research and constant learning ,i have decided to pursue a Master's program in Mechanical Engineering and get involved in higher studies in this area </p>
+                                <p>Hi! I am Shanmukha Ram pursuing B.tech in Mechanical Engineering at VIT-AP(  Vellore Institute of Technology- Andhra Pradesh). To satiate my curiosity and love for research, I am willing to pursue Masters (MSc) in Mechanical Engineering. </p>
                             </div>
                         </div>
                     </div>
